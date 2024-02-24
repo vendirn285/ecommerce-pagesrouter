@@ -129,7 +129,7 @@ const ProductCard = ({ id, image, brand, name, price, rating }) => (
         </div>
       </CardBody>
       <CardFooter className="pt-0">
-        <Link href="product/productpage">
+        <Link href="product/product">
           <Button
             ripple={false}
             fullWidth={true}

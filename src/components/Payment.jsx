@@ -35,11 +35,6 @@ export default function Payment() {
                 />
                 <span className="font-bold">Gopay</span>
               </div>
-              <Link href="/checkout">
-                <button className="bg-primary text-white font-bold py-2 px-4 rounded-lg mt-4 w-full">
-                  Checkout
-                </button>
-              </Link>
             </div>
           </div>
           <div className="md:w-3/4">

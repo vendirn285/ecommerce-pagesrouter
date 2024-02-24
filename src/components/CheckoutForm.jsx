@@ -182,7 +182,7 @@ export default function CheckoutForm() {
                   <span className="font-semibold">Total</span>
                   <span className="font-semibold">Rp. 262.000</span>
                 </div>
-                <Link href="/paymentpage">
+                <Link href="/payment">
                   <button className="bg-primary text-white font-bold py-2 px-4 rounded-lg mt-4 w-full">
                     Pilih Metode Pembayaran
                   </button>

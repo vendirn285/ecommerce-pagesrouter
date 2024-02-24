@@ -15,17 +15,17 @@ export default function Sidebar() {
     <div class="md:w 3/4">
       <Card className="bg-peach w-full p-4 shadow-xl shadow-blue-gray-900/5">
         <List>
-          <Link href="/accountpage">
+          <Link href="/account">
             <ListItem className="font-bold text-lg hover:bg-grape">
               Profil Saya
             </ListItem>
           </Link>
-          <Link href="/orderpage">
+          <Link href="/order">
             <ListItem className="font-bold text-lg hover:bg-grape">
               Pesanan Saya
             </ListItem>
           </Link>
-          <Link href="/addresspage">
+          <Link href="/address">
             <ListItem className="font-bold text-lg hover:bg-grape">
               Alamat Pengiriman
             </ListItem>
@@ -35,7 +35,7 @@ export default function Sidebar() {
               Keranjang
             </ListItem>
           </Link>
-          <Link href="/reviewpage">
+          <Link href="/review">
             <ListItem className="font-bold text-lg hover:bg-grape">
               Ulasan
             </ListItem>

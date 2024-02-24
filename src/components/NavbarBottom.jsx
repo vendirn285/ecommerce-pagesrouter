@@ -8,7 +8,7 @@ export default function NavbarBottom() {
       <ul className="flex space-x-20">
         <li>
           <Link
-            href="/product/searchpage"
+            href="/product/searchresult"
             className="flex items-center text-white "
           >
             Filter <IoIosArrowDown />
