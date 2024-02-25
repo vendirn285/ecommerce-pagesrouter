@@ -8,6 +8,23 @@ import { GoSearch } from 'react-icons/go'
 import NavbarBottom from './NavbarBottom'
 
 export default function Navbar() {
+  const [isLogin, setIsLogin] = useState(false);
+
+  if (typeof window !== "undefined") {
+    var getToken = window.localStorage.getItem("token"); 
+    console.log(getToken);
+  }
+
+  useEffect(() => {
+    const token = getToken;
+    if (token) {
+      setIsLogin(true);
+    }
+    else {
+      setIsLogin(false);
+    }
+  }, [getToken]);
+
   return (
     <div className="fixed w-full justify-between z-10 bg-primary">
       <header className="flex justify-between items-center mx-20 mt-5 space-x-10">
@@ -29,23 +46,40 @@ export default function Navbar() {
         </div>
         <div>
           <ul className="flex items-center space-x-20">
-            <li>
+            {isLogin && (
+              <li>
               <Link href="/cart">
                 <MdOutlineShoppingBag color="white" size={30} />
               </Link>
             </li>
+            )}
+            
             <li>
               <Link href="/account">
                 <IoMdNotificationsOutline color="white" size={30} />
               </Link>
             </li>
-            <li>
+            {!isLogin && (
+              <li>
               <Link href="/login">
                 <button className="bg-peach text-black text-sm font-bold rounded-full w-full px-8 py-2">
                   Login
                 </button>
               </Link>
-            </li>
+              
+              </li>
+            )}
+            
+            {isLogin && (
+              <li>
+                <Link href="/">
+                  <button className="bg-peach text-black text-sm font-bold rounded-full w-full px-8 py-2" onClick={() => localStorage.removeItem("token")}>
+                    Logout
+                  </button>
+                </Link>
+              
+              </li>
+            )}
           </ul>
         </div>
       </header>
